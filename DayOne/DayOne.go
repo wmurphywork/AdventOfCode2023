@@ -5,8 +5,8 @@ import (
     "fmt"
     "log"
     "os"
-	"regexp"
-	"strconv"
+    "regexp"
+    "strconv"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
     }
     defer file.Close()
 
-	totalCounter := 0
+    totalCounter := 0
     scanner := bufio.NewScanner(file)
     for scanner.Scan() {
 		regexToUse := regexp.MustCompile("[0-9]")
@@ -33,6 +33,6 @@ func main() {
     if err := scanner.Err(); err != nil {
         log.Fatal(err)
     }
-	fmt.Println("The answer is...")
-	fmt.Println(totalCounter)
+    fmt.Println("The answer is...")
+    fmt.Println(totalCounter)
 }
